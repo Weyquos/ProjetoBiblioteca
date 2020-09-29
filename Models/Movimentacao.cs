@@ -10,12 +10,10 @@ namespace ProjetoWPF.Models
     {
         public Movimentacao()
         {
-            LocadoEm = DateTime.Now;
-            Livro = new List<Livro>();
-            Usuario = new List<Usuario>();
+            Usuario = new Usuario();
+            ItensMovimentacao = new List<ItensMovimentacao>();
         }
-        public DateTime LocadoEm { get; set; } //quando o adm clicar em "locar" no botão, gravar a data/hora que o livro foi locado
-        public List<Livro> Livro { get; set; }
-        public List<Usuario> Usuario { get; set; }
+        public Usuario Usuario { get; set; }
+        public List<ItensMovimentacao> ItensMovimentacao { get; set; }
     }
 }

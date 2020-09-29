@@ -12,9 +12,9 @@ namespace ProjetoWPF.Models
         public Livro()
         {
             Status = "Disponivel";
-            Categoria = new List<Categoria>();
+            Categoria = new Categoria();
         }
-        public List<Categoria> Categoria { get; set; }
+        public Categoria Categoria { get; set; }
         public string Nome { get; set; }
         public string Autor { get; set; }
         public string AnoPublicacao { get; set; }
