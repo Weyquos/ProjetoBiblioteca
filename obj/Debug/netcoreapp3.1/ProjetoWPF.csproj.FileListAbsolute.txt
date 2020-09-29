@@ -59,3 +59,17 @@ C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\View
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmCadastrarLivro.baml
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmCadastrarCategoria.g.cs
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmCadastrarCategoria.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmRemoverLivro.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmRemoverLivro.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmAlterarLivro.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmAlterarLivro.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmAlugarLivro.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmAlugarLivro.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmCadastrarUsuario.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmCadastrarUsuario.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmListarTodosLivros.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmListarTodosLivros.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmAlterarUsuario.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmAlterarUsuario.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmRemoverUsuario.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmRemoverUsuario.baml

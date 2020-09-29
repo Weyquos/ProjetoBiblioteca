@@ -7,24 +7,66 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\frmAlterarLivro.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmAlterarUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmAlugarLivro.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\frmCadastrarCategoria.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\frmCadastrarLivro.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\frmCadastrarUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmListarTodosLivros.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\frmPrincipal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmRemoverLivro.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\frmRemoverUsuario.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\frmAlterarLivro.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmAlterarUsuario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmAlugarLivro.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\frmCadastrarCategoria.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\frmCadastrarLivro.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\frmCadastrarUsuario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmListarTodosLivros.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\frmPrincipal.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmRemoverLivro.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmRemoverUsuario.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -12,6 +12,7 @@ namespace ProjetoWPF.DAL
 
         public static bool Cadastrar(Livro livro)
         {
+            //aqui, fazer o for com o resultado do txt quantidade e -> usar o .AddRange(livro) no lugar do Add(livro)
             if(BuscarPorNome(livro.Nome) == null)
             {
                 _context.Livros.Add(livro);

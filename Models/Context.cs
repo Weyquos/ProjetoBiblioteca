@@ -10,12 +10,13 @@ namespace ProjetoWPF.Models
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Movimentacao> Movimentacao { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer
                 (@"Server=(localdb)\mssqllocaldb;
-                    Database=ProjetoBibliotecaWPF;
+                    Database=ProjetoFinalBibliotecaWPF;
                     Trusted_Connection=true");
         }
     }

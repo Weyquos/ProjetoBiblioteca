@@ -30,7 +30,6 @@ namespace ProjetoWPF.DAL
 
         public static Usuario BuscarPorCpf(string cpf) => _context.Usuarios.FirstOrDefault(x => x.Cpf.Equals(cpf));
         public static Usuario BuscarPorEmail(string email) => _context.Usuarios.FirstOrDefault(x => x.Email.Equals(email));
-        public static Usuario BuscarParaLogin(string email, string senha) => _context.Usuarios.FirstOrDefault(x => x.Email.Equals(email) && x.Senha.Equals(senha));
         public static void AlterarDados(Usuario usuario)
         {
             _context.Usuarios.Update(usuario);

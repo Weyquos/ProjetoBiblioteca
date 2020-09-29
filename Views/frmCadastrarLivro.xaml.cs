@@ -19,6 +19,7 @@ namespace ProjetoWPF.Views
     /// </summary>
     public partial class frmCadastrarLivro : Window
     {
+
         public frmCadastrarLivro()
         {
             InitializeComponent();
@@ -35,8 +36,15 @@ namespace ProjetoWPF.Views
             txtNome.Focus();
         }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cboCategoria.ItemsSource = CategoriaDAO.Listar();
+            cboCategoria.SelectedValuePath = "Id";
+        }
+
         private void btnCadastrarLivro(object sender, RoutedEventArgs e)
         {
+            //pegar o txt quantidade e fazer um loop aqui e/ou (não tenho certeza, acho que é so no metodo cadastrar do livroDAO), no metodo cadastrar em LivroDAO
             if (!string.IsNullOrWhiteSpace(txtNome.Text))
             {
                 Livro livro = new Livro
@@ -45,7 +53,7 @@ namespace ProjetoWPF.Views
                     Editora = txtEditora.Text,
                     AnoPublicacao = txtAnoPublicacao.Text,
                     Autor = txtAutor.Text,
-                    Quantidade = Convert.ToInt32(txtQuantidade.Text)
+                    //MessageBox.Show($"Id: {cboCategoria.SelectedValue}");
                 };
                 if (LivroDAO.Cadastrar(livro))
                 {

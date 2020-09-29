@@ -2,25 +2,25 @@
 
 namespace ProjetoWPF.Migrations
 {
-    public partial class AddCategoriaTabelaLivro : Migration
+    public partial class LivroEmMovimentacao : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<int>(
-                name: "CategoriaId",
+                name: "MovimentacaoId",
                 table: "Livros",
                 nullable: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Livros_CategoriaId",
+                name: "IX_Livros_MovimentacaoId",
                 table: "Livros",
-                column: "CategoriaId");
+                column: "MovimentacaoId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Livros_Categorias_CategoriaId",
+                name: "FK_Livros_Movimentacao_MovimentacaoId",
                 table: "Livros",
-                column: "CategoriaId",
-                principalTable: "Categorias",
+                column: "MovimentacaoId",
+                principalTable: "Movimentacao",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Restrict);
         }
@@ -28,15 +28,15 @@ namespace ProjetoWPF.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Livros_Categorias_CategoriaId",
+                name: "FK_Livros_Movimentacao_MovimentacaoId",
                 table: "Livros");
 
             migrationBuilder.DropIndex(
-                name: "IX_Livros_CategoriaId",
+                name: "IX_Livros_MovimentacaoId",
                 table: "Livros");
 
             migrationBuilder.DropColumn(
-                name: "CategoriaId",
+                name: "MovimentacaoId",
                 table: "Livros");
         }
     }

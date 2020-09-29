@@ -10,8 +10,8 @@ using ProjetoWPF.Models;
 namespace ProjetoWPF.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200924000057_CriarBanco")]
-    partial class CriarBanco
+    [Migration("20200929020305_TestandoRelacionamento")]
+    partial class TestandoRelacionamento
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -52,6 +52,9 @@ namespace ProjetoWPF.Migrations
                     b.Property<string>("Autor")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("CategoriaId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CriadoEm")
                         .HasColumnType("datetime2");
 
@@ -61,15 +64,32 @@ namespace ProjetoWPF.Migrations
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
-
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoriaId");
+
                     b.ToTable("Livros");
+                });
+
+            modelBuilder.Entity("ProjetoWPF.Models.Movimentacao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LocadoEm")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Movimentacao");
                 });
 
             modelBuilder.Entity("ProjetoWPF.Models.Usuario", b =>
@@ -88,18 +108,19 @@ namespace ProjetoWPF.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LivroPosse")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Nome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Senha")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("ProjetoWPF.Models.Livro", b =>
+                {
+                    b.HasOne("ProjetoWPF.Models.Categoria", null)
+                        .WithMany("Livro")
+                        .HasForeignKey("CategoriaId");
                 });
 #pragma warning restore 612, 618
         }

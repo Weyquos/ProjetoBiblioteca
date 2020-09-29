@@ -42,5 +42,47 @@ namespace ProjetoWPF.Views
             frmCadastrarCategoria frm = new frmCadastrarCategoria();
             frm.ShowDialog();
         }
+
+        private void menuRemoverLivro_Click(object sender, RoutedEventArgs e)
+        {
+            frmRemoverLivro frm = new frmRemoverLivro();
+            frm.ShowDialog();
+        }
+
+        private void menuRemoverUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frmRemoverUsuario frm = new frmRemoverUsuario();
+            frm.ShowDialog();
+        }
+
+        private void menuAlterarLivro_Click(object sender, RoutedEventArgs e)
+        {
+            frmAlterarLivro frm = new frmAlterarLivro();
+            frm.ShowDialog();
+        }
+
+        private void menuAlterarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frmAlterarUsuario frm = new frmAlterarUsuario();
+            frm.ShowDialog();
+        }
+
+        private void menuAlugarLivro_Click(object sender, RoutedEventArgs e)
+        {
+            frmAlugarLivro frm = new frmAlugarLivro();
+            frm.ShowDialog();
+        }
+
+        private void menuCadastrarUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            frmCadastrarUsuario frm = new frmCadastrarUsuario();
+            frm.ShowDialog();
+        }
+
+        private void menuListarTodosLivros_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarTodosLivros frm = new frmListarTodosLivros();
+            frm.ShowDialog();
+        }
     }
 }

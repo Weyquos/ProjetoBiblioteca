@@ -1,0 +1,27 @@
+﻿<Window x:Class="ProjetoWPF.Views.frmRemoverLivro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoWPF.Views"
+        mc:Ignorable="d"
+        Title="Remover Livro" Height="270" Width="352" UseLayoutRounding="True" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtNome"  HorizontalAlignment="Left" Margin="150,60,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="0"/>
+        <TextBox x:Name="txtEditora"  HorizontalAlignment="Left" Margin="150,90,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="1" IsEnabled="False"/>
+        <TextBox x:Name="txtAnoPublicacao"  HorizontalAlignment="Left" Margin="150,120,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="2" IsEnabled="False"/>
+        <TextBox x:Name="txtAutor"  HorizontalAlignment="Left" Margin="150,150,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="3" IsEnabled="False"/>
+        <Label Content="Remover Livro" FontFamily="Arial" FontSize="16" FontStretch="Medium" Grid.ColumnSpan="3" TabIndex="5"/>
+        <Label Content="Nome:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,60,0,0" VerticalAlignment="Top"/>
+        <Label Content="Editora:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ano de Publicação:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,120,0,0" VerticalAlignment="Top"/>
+        <Label Content="Autor:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,150,0,0" VerticalAlignment="Top"/>
+        <Button Content="Remover" HorizontalAlignment="Left" Margin="198,186,0,0" VerticalAlignment="Top" Height="25" Width="72" FontFamily="Arial" FontSize="14" FontStretch="Medium" FontWeight="Normal" Foreground="#FF171917" ForceCursor="True" Background="#DC143C" Grid.ColumnSpan="2" Click="btnRemoverLivro" TabIndex="7"></Button>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="104,186,0,0" VerticalAlignment="Top" Height="25" Width="72" FontFamily="Arial" FontSize="14" FontStretch="Medium" FontWeight="Normal" Foreground="#FF171917" ForceCursor="True" Background="#F8F8FF" Click="btnBuscarLivro" TabIndex="6"/>
+    </Grid>
+</Window>

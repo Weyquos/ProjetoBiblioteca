@@ -11,11 +11,22 @@
             <MenuItem Header="_Cadastrar">
                 <MenuItem x:Name="menuCadastrarLivro" Header="_Livro" Click="menuCadastrarLivro_Click" />
                 <MenuItem x:Name="menuCadastrarCategoria" Header="_Categoria" Click="menuCadastrarCategoria_Click" />
+                <MenuItem x:Name="menuCadastrarUsuario" Header="_Usuario" Click="menuCadastrarUsuario_Click" />
             </MenuItem>
-            <MenuItem Header="_Listar"/>
-            <MenuItem Header="_Alterar"/>
-            <MenuItem Header="_Remover"/>
-            <MenuItem Header="_Alugar"/>
+            <MenuItem Header="_Alterar">
+                <MenuItem x:Name="menuAlterarLivro" Header="_Livro" Click="menuAlterarLivro_Click" />
+                <MenuItem x:Name="menuAlterarUsuario" Header="_Usuario" Click="menuAlterarUsuario_Click" />
+            </MenuItem>
+            <MenuItem Header="_Remover">
+                <MenuItem x:Name="menuRemoverLivro" Header="_Livro" Click="menuRemoverLivro_Click" />
+                <MenuItem x:Name="menuRemoverUsuario" Header="_Usuario" Click="menuRemoverUsuario_Click" />
+            </MenuItem>
+            <MenuItem Header="_Alugar">
+                <MenuItem x:Name="menuAlugarLivro" Header="_Livro" Click="menuAlugarLivro_Click" />
+            </MenuItem>
+            <MenuItem Header="_Listar">
+                <MenuItem x:Name="menuListarTodosLivros" Header="_Livro" Click="menuListarTodosLivros_Click" />
+            </MenuItem>
             <MenuItem x:Name="menuSair" Header="_Sair" Click="menuSair_Click" />
         </Menu>
 

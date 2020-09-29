@@ -10,8 +10,8 @@ using ProjetoWPF.Models;
 namespace ProjetoWPF.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200924002210_ArrumandoRelacionamentoCategoriaLivro")]
-    partial class ArrumandoRelacionamentoCategoriaLivro
+    [Migration("20200929002306_CriarBanco")]
+    partial class CriarBanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,14 +63,8 @@ namespace ProjetoWPF.Migrations
                     b.Property<string>("Editora")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("LocadoEm")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Quantidade")
-                        .HasColumnType("int");
 
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
@@ -78,6 +72,24 @@ namespace ProjetoWPF.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Livros");
+                });
+
+            modelBuilder.Entity("ProjetoWPF.Models.Movimentacao", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CriadoEm")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LocadoEm")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Movimentacao");
                 });
 
             modelBuilder.Entity("ProjetoWPF.Models.Usuario", b =>
@@ -96,8 +108,8 @@ namespace ProjetoWPF.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LivroPosse")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("MovimentacaoId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
@@ -107,6 +119,8 @@ namespace ProjetoWPF.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MovimentacaoId");
+
                     b.ToTable("Usuarios");
                 });
 
@@ -115,6 +129,13 @@ namespace ProjetoWPF.Migrations
                     b.HasOne("ProjetoWPF.Models.Livro", null)
                         .WithMany("Categoria")
                         .HasForeignKey("LivroId");
+                });
+
+            modelBuilder.Entity("ProjetoWPF.Models.Usuario", b =>
+                {
+                    b.HasOne("ProjetoWPF.Models.Movimentacao", null)
+                        .WithMany("Usuario")
+                        .HasForeignKey("MovimentacaoId");
                 });
 #pragma warning restore 612, 618
         }

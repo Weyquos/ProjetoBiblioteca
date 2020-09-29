@@ -10,6 +10,7 @@ namespace ProjetoWPF.Models
     class Categoria : BaseModel
     {
         public string Nome { get; set; }
-        public override string ToString() => $"Nome: {Nome}";
+        public override string ToString() => $"{Nome}";
+
     }
 }

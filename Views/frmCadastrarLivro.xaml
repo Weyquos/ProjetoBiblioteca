@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoWPF.Views"
         mc:Ignorable="d"
-        Title="Cadastrar Livro" Height="316" Width="352" UseLayoutRounding="True" WindowStartupLocation="CenterScreen">
+        Title="Cadastrar Livro" Height="340" Width="352" UseLayoutRounding="True" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="65*"/>
@@ -23,6 +23,9 @@
         <Label Content="Ano de Publicação:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,120,0,0" VerticalAlignment="Top"/>
         <Label Content="Autor:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,150,0,0" VerticalAlignment="Top"/>
         <Label Content="Quantidade:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,180,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.355,0.538"/>
-        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="150,220,0,0" VerticalAlignment="Top" Height="23" Width="120" FontFamily="Arial" FontSize="14" FontStretch="Medium" FontWeight="Normal" Foreground="#FF171917" ForceCursor="True" Background="#FF68AA3A" Grid.ColumnSpan="2" Click="btnCadastrarLivro"></Button>
+        <Label Content="Editora:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,90,0,0" VerticalAlignment="Top"/>
+        <Button Content="Cadastrar" HorizontalAlignment="Left" Margin="150,247,0,0" VerticalAlignment="Top" Height="23" Width="120" FontFamily="Arial" FontSize="14" FontStretch="Medium" FontWeight="Normal" Foreground="#FF171917" ForceCursor="True" Background="#FF68AA3A" Grid.ColumnSpan="2" Click="btnCadastrarLivro"></Button>
+        <ComboBox x:Name="cboCategoria" Margin="150,211,38,92" Grid.ColumnSpan="2" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Label Content="Categoria:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,208,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.355,0.538"/>
     </Grid>
 </Window>
