@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoWPF.Views"
         mc:Ignorable="d"
-        Title="Alugar Livro" Height="270" Width="352" UseLayoutRounding="True" WindowStartupLocation="CenterScreen">
+        Title="Alugar Livro" Height="300" Width="352" UseLayoutRounding="True" WindowStartupLocation="CenterScreen"  Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="11*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="txtNome"  HorizontalAlignment="Left" Margin="150,60,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="0"/>
+        <TextBox x:Name="txtEditora"  HorizontalAlignment="Left" Margin="150,90,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="1" IsEnabled="False"/>
+        <TextBox x:Name="txtAnoPublicacao"  HorizontalAlignment="Left" Margin="150,120,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="2" IsEnabled="False"/>
+        <TextBox x:Name="txtAutor"  HorizontalAlignment="Left" Margin="150,150,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" TabIndex="3" IsEnabled="False"/>
+        <Label Content="Alugar Livro" FontFamily="Arial" FontSize="16" FontStretch="Medium" Grid.ColumnSpan="3" TabIndex="5"/>
+        <Label Content="Nome:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,60,0,0" VerticalAlignment="Top"/>
+        <Label Content="Editora:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ano de Publicação:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,120,0,0" VerticalAlignment="Top"/>
+        <Label Content="Cliente" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,179,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.444,2.528"/>
+        <Label Content="Autor:" FontFamily="Arial" FontSize="12" HorizontalAlignment="Left" Margin="9,150,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboUsuario" HorizontalAlignment="Left" Margin="150,179,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2" Height="24"/>
+        <Button x:Name="btnAlugar"  Content="Alugar" HorizontalAlignment="Left" Margin="198,224,0,0" VerticalAlignment="Top" Height="25" Width="72" FontFamily="Arial" FontSize="14" FontStretch="Medium" FontWeight="Normal" Foreground="#FF171917" ForceCursor="True" Background="#7FFFD4" Grid.ColumnSpan="2" Click="btnAlugarLivro_Click" TabIndex="7" IsEnabled="False"></Button>
+        <Button Content="Buscar" HorizontalAlignment="Left" Margin="104,224,0,0" VerticalAlignment="Top" Height="25" Width="72" FontFamily="Arial" FontSize="14" FontStretch="Medium" FontWeight="Normal" Foreground="#FF171917" ForceCursor="True" Background="#F8F8FF" Click="btnBuscarLivro_Click" TabIndex="6"/>
     </Grid>
 </Window>

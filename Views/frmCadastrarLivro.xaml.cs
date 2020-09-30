@@ -36,9 +36,11 @@ namespace ProjetoWPF.Views
             txtNome.Focus();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            //Carregar os dados de clientes
             cboCategoria.ItemsSource = CategoriaDAO.Listar();
+            cboCategoria.DisplayMemberPath = "Nome";
             cboCategoria.SelectedValuePath = "Id";
         }
 
@@ -47,13 +49,14 @@ namespace ProjetoWPF.Views
             //pegar o txt quantidade e fazer um loop aqui e/ou (não tenho certeza, acho que é so no metodo cadastrar do livroDAO), no metodo cadastrar em LivroDAO
             if (!string.IsNullOrWhiteSpace(txtNome.Text))
             {
+                int id = (int)cboCategoria.SelectedValue;
+                Categoria categoria = CategoriaDAO.BuscarPorId(id);
                 Livro livro = new Livro
                 {
                     Nome = txtNome.Text,
                     Editora = txtEditora.Text,
                     AnoPublicacao = txtAnoPublicacao.Text,
                     Autor = txtAutor.Text,
-                    //MessageBox.Show($"Id: {cboCategoria.SelectedValue}");
                 };
                 if (LivroDAO.Cadastrar(livro))
                 {
