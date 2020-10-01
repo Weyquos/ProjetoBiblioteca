@@ -73,3 +73,5 @@ C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\View
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmAlterarUsuario.baml
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmRemoverUsuario.g.cs
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmRemoverUsuario.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmListarLivrosLocados.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmListarLivrosLocados.baml

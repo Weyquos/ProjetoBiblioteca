@@ -84,5 +84,11 @@ namespace ProjetoWPF.Views
             frmListarTodosLivros frm = new frmListarTodosLivros();
             frm.ShowDialog();
         }
+
+        private void menuListarLivrosLocados_Click(object sender, RoutedEventArgs e)
+        {
+            frmListarLivrosLocados frm = new frmListarLivrosLocados();
+            frm.ShowDialog();
+        }
     }
 }
