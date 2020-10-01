@@ -21,11 +21,11 @@
                 <MenuItem x:Name="menuRemoverLivro" Header="_Livro" Click="menuRemoverLivro_Click" />
                 <MenuItem x:Name="menuRemoverUsuario" Header="_Usuario" Click="menuRemoverUsuario_Click" />
             </MenuItem>
-            <MenuItem Header="_Alugar">
-                <MenuItem x:Name="menuAlugarLivro" Header="_Livro" Click="menuAlugarLivro_Click" />
+            <MenuItem Header="_Movimentação">
+                <MenuItem x:Name="menuAlugarLivro" Header="_Alugar Livro" Click="menuAlugarLivro_Click" />
             </MenuItem>
             <MenuItem Header="_Listar">
-                <MenuItem x:Name="menuListarTodosLivros" Header="_Livro" Click="menuListarTodosLivros_Click" />
+                <MenuItem x:Name="menuListarTodosLivros" Header="_Todos os Livros" Click="menuListarTodosLivros_Click" />
             </MenuItem>
             <MenuItem x:Name="menuSair" Header="_Sair" Click="menuSair_Click" />
         </Menu>

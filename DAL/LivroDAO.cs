@@ -1,4 +1,5 @@
-﻿using ProjetoWPF.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjetoWPF.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace ProjetoWPF.DAL
 
         public static Livro BuscarPorNome(string nome) => _context.Livros.FirstOrDefault(x => x.Nome.Equals(nome));
 
-        public static List<Livro> Listar() => _context.Livros.ToList();
+        public static List<Livro> Listar() => _context.Livros.Include(x=> x.Categoria).ToList();
 
         public static Livro BuscarPorId(int id) => _context.Livros.Find(id);
         public static void AlterarDados(Livro livro)

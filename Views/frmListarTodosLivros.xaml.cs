@@ -19,15 +19,14 @@ namespace ProjetoWPF.Views
     /// </summary>
     public partial class frmListarTodosLivros : Window
     {
-        private List<Livro> livros = new List<Livro>();
         public frmListarTodosLivros()
         {
             InitializeComponent();
         }
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            dtaLivros.ItemsSource = livros;
+            dtaLivros.ItemsSource = LivroDAO.Listar();
         }
     }
 }

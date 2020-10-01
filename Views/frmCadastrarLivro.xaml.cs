@@ -57,6 +57,7 @@ namespace ProjetoWPF.Views
                     Editora = txtEditora.Text,
                     AnoPublicacao = txtAnoPublicacao.Text,
                     Autor = txtAutor.Text,
+                    Categoria = categoria,
                 };
                 if (LivroDAO.Cadastrar(livro))
                 {

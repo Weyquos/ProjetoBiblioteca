@@ -5,9 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjetoWPF.Views"
         mc:Ignorable="d"
-        Title="Todos os Livros" Height="240" Width="352" UseLayoutRounding="True" WindowStartupLocation="CenterScreen">
+        Title="Todos os Livros" Height="300" Width="540" UseLayoutRounding="True" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="dtaLivros" HorizontalAlignment="Center" VerticalAlignment="Top" Height="170" Width="288" Margin="0,22,0,0" Grid.ColumnSpan="2" SelectionChanged="DataGrid_SelectionChanged"/>
+        <DataGrid x:Name="dtaLivros" AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="220" Width="500" Margin="0,22,0,0" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome" Width="70" Binding="{Binding Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Categoria" Width="70" Binding="{Binding Categoria.Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Autor" Width="70" Binding="{Binding Autor}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Editora" Width="70" Binding="{Binding Editora}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Ano de Publicação" Width="1*" Binding="{Binding AnoPublicacao}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Status" Width="100" Binding="{Binding Status}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
 
