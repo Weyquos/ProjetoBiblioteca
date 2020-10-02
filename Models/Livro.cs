@@ -19,7 +19,7 @@ namespace ProjetoWPF.Models
         public string Autor { get; set; }
         public string AnoPublicacao { get; set; }
         public string Editora { get; set; }
-        public string Status { get; set; } //disponivel -- locado
+        public string Status { get; set; } //Disponivel -- Locado
         public override string ToString() => $"Nome: {Nome} | Autor: {Autor} | Ano de Publicação: {AnoPublicacao} | Editora: {Editora} ";
     }
 }

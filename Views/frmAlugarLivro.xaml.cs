@@ -19,8 +19,8 @@ namespace ProjetoWPF.Views
     /// </summary>
     public partial class frmAlugarLivro : Window
     {
+        private Movimentacao movimentacao = new Movimentacao();
         private Livro livro;
-        //Instanciar as listas de movimentação ou itens movimentação, ver no modelo do professor "cadastrarVenda" -> https://github.com/dideconto/desenvolvimentomicrosoftnoite
         public frmAlugarLivro()
         {
             InitializeComponent();
@@ -28,7 +28,18 @@ namespace ProjetoWPF.Views
 
         private void btnAlugarLivro_Click(object sender, RoutedEventArgs e)
         {
-            //Desenvolver o Metódo
+            if(livro.Status.Equals("Locado"))
+            {
+                MessageBox.Show("O livro já está alugado.", "Biblioteca", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else
+            {
+                int idUsuario = (int)cboUsuario.SelectedValue;
+                movimentacao.Usuario = UsuarioDAO.BuscarPorId(idUsuario);
+                MovimentacaoDAO.Cadastrar(movimentacao);
+                MessageBox.Show("Livro alugado com sucesso.", "Biblioteca", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            
         }
 
         private void LimparFormulario()
@@ -62,6 +73,7 @@ namespace ProjetoWPF.Views
                     txtEditora.Text = livro.Editora;
                     txtAnoPublicacao.Text = livro.AnoPublicacao;
                     txtAutor.Text = livro.Autor;
+                    livro.Status = "Locado";
                 }
                 else
                 {
