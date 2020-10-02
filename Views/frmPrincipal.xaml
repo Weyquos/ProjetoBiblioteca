@@ -23,6 +23,7 @@
             </MenuItem>
             <MenuItem Header="_Movimentação">
                 <MenuItem x:Name="menuAlugarLivro" Header="_Alugar Livro" Click="menuAlugarLivro_Click" />
+                <MenuItem x:Name="menuDevolverLivro" Header="_Devolver Livro" Click="menuDevolverLivro_Click" />
             </MenuItem>
             <MenuItem Header="_Listar">
                 <MenuItem x:Name="menuListarTodosLivros" Header="_Todos os Livros" Click="menuListarTodosLivros_Click" />

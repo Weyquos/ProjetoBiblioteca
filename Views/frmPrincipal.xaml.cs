@@ -73,6 +73,12 @@ namespace ProjetoWPF.Views
             frm.ShowDialog();
         }
 
+        private void menuDevolverLivro_Click(object sender, RoutedEventArgs e)
+        {
+            frmDevolverLivro frm = new frmDevolverLivro();
+            frm.ShowDialog();
+        }
+
         private void menuCadastrarUsuario_Click(object sender, RoutedEventArgs e)
         {
             frmCadastrarUsuario frm = new frmCadastrarUsuario();

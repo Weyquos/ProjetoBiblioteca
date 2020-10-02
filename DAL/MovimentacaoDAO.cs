@@ -1,7 +1,7 @@
 ﻿using ProjetoWPF.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq;  
 using System.Text;
 
 namespace ProjetoWPF.DAL
@@ -20,5 +20,7 @@ namespace ProjetoWPF.DAL
         public static List<Movimentacao> Listar() => _context.Movimentacao.ToList();
 
         public static Movimentacao BuscarPorId(int id) => _context.Movimentacao.Find(id);
+
+        //Criar metódo que busca o CPF + nome do livro pra validar a entrega.
     }
 }

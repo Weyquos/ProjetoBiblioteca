@@ -34,6 +34,7 @@ namespace ProjetoWPF.Views
             }
             else
             {
+                livro.Status = "Locado";
                 int idUsuario = (int)cboUsuario.SelectedValue;
                 movimentacao.Usuario = UsuarioDAO.BuscarPorId(idUsuario);
                 MovimentacaoDAO.Cadastrar(movimentacao);
@@ -73,7 +74,6 @@ namespace ProjetoWPF.Views
                     txtEditora.Text = livro.Editora;
                     txtAnoPublicacao.Text = livro.AnoPublicacao;
                     txtAutor.Text = livro.Autor;
-                    livro.Status = "Locado";
                 }
                 else
                 {
