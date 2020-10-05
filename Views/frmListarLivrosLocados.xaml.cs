@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoWPF.DAL;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -24,7 +25,7 @@ namespace ProjetoWPF.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //dtaLivrosLocados.ItemsSource = LivroDAO.ListarLivrosLocados();
+            dtaLivrosLocados.ItemsSource = LivroDAO.ListarLivrosLocados();
         }
     }
 }

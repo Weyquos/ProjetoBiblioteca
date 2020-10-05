@@ -28,7 +28,7 @@ namespace ProjetoWPF.DAL
 
         public static List<Livro> Listar() => _context.Livros.Include(x=> x.Categoria).ToList();
 
-        //ListarLivrosLocados()
+        public static List<Livro> ListarLivrosLocados() => _context.Livros.Include(x => x.Categoria).Where(x=> x.Status.Equals("Locado")).ToList();
 
         public static Livro BuscarPorId(int id) => _context.Livros.Find(id);
         public static void AlterarDados(Livro livro)

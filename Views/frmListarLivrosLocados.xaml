@@ -7,15 +7,14 @@
         mc:Ignorable="d"
         Title="Livros Locados" Height="300" Width="600" UseLayoutRounding="True" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="dtaLivrosLocados" AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="220" Width="530" Margin="0,22,0,0" Grid.ColumnSpan="2">
+        <DataGrid x:Name="dtaLivrosLocados" AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="220" Width="460" Margin="0,22,0,0" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Width="70" Binding="{Binding Nome}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Categoria" Width="70" Binding="{Binding Categoria.Nome}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Autor" Width="70" Binding="{Binding Autor}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Editora" Width="70" Binding="{Binding Editora}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Ano de Publicação" Width="110" Binding="{Binding AnoPublicacao}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Status" Width="60" Binding="{Binding Status}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Locado Por" Width="100" Binding="{Binding Usuario.Nome}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Status" Width="100" Binding="{Binding Status}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

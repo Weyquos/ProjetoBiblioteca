@@ -27,14 +27,6 @@ namespace ProjetoWPF.Views
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            //Carregar os dados de clientes
-            cboUsuario.ItemsSource = UsuarioDAO.Listar();
-            cboUsuario.DisplayMemberPath = "Cpf";
-            cboUsuario.SelectedValuePath = "Id";
-        }
-
         private void LimparFormulario()
         {
             txtNome.Clear();
@@ -45,12 +37,12 @@ namespace ProjetoWPF.Views
             txtNome.Focus();
         }
 
-        private void btnBuscarLivroEUsuario_Click(object sender, RoutedEventArgs e)
+        private void btnBuscarLivro_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtNome.Text))
             {
+
                 livro = LivroDAO.BuscarPorNome(txtNome.Text);
-                usuario = UsuarioDAO.BuscarPorCpf(cboUsuario.Text);
                 if (livro != null && usuario != null)
                 {
                     btnDevolver.IsEnabled = true;
@@ -62,14 +54,14 @@ namespace ProjetoWPF.Views
                 }
                 else
                 {
-                    MessageBox.Show("Esse livro não está em posse desse CPF.", "Biblioteca",
+                    MessageBox.Show("Esse livro não existe.", "Biblioteca",
                         MessageBoxButton.OK, MessageBoxImage.Error);
                     LimparFormulario();
                 }
             }
             else
             {
-                MessageBox.Show("Preencha o campo nome ou e selecione um CPF.", "Biblioteca",
+                MessageBox.Show("Preencha o campo nome.", "Biblioteca",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -83,10 +75,8 @@ namespace ProjetoWPF.Views
             else
             {
                 livro.Status = "Disponivel";
-                int idUsuario = (int)cboUsuario.SelectedValue;
-                movimentacao.Usuario = UsuarioDAO.BuscarPorId(idUsuario);
                 MovimentacaoDAO.Cadastrar(movimentacao);
-                MessageBox.Show("Livro disponível com sucesso.", "Biblioteca", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Livro entregue com sucesso.", "Biblioteca", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }
