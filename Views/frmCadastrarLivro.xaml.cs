@@ -19,6 +19,17 @@ namespace ProjetoWPF.Views
     /// </summary>
     public partial class frmCadastrarLivro : Window
     {
+        public int quantidade = 0;
+        public void auxQtd(int qtd = 0)
+        {
+            if (txtQuantidade.Text != "")
+            {
+                if (Int32.TryParse(txtQuantidade.Text, out qtd)) ;
+
+            }
+            if (qtd != 0)
+                quantidade = qtd;
+        }
 
         public frmCadastrarLivro()
         {
@@ -46,20 +57,31 @@ namespace ProjetoWPF.Views
 
         private void btnCadastrarLivro(object sender, RoutedEventArgs e)
         {
+            auxQtd();
             //pegar o txt quantidade e fazer um loop aqui e/ou (não tenho certeza, acho que é so no metodo cadastrar do livroDAO), no metodo cadastrar em LivroDAO
             if (!string.IsNullOrWhiteSpace(txtNome.Text))
             {
                 int id = (int)cboCategoria.SelectedValue;
                 Categoria categoria = CategoriaDAO.BuscarPorId(id);
-                Livro livro = new Livro
+
+                var livros = new List<Livro>();
+
+                for (int i = 0; i < quantidade; i++)
                 {
-                    Nome = txtNome.Text,
-                    Editora = txtEditora.Text,
-                    AnoPublicacao = txtAnoPublicacao.Text,
-                    Autor = txtAutor.Text,
-                    Categoria = categoria,
-                };
-                if (LivroDAO.Cadastrar(livro))
+                    Livro livro = new Livro
+                    {
+                        Nome = txtNome.Text,
+                        Editora = txtEditora.Text,
+                        AnoPublicacao = txtAnoPublicacao.Text,
+                        Autor = txtAutor.Text,
+                        Categoria = categoria,
+                    };
+
+                    livros.Add(livro);
+
+                }
+
+                if (LivroDAO.Cadastrar(livros, quantidade))
                 {
                     MessageBox.Show("Livro Cadastrado com Sucesso.", "Biblioteca", MessageBoxButton.OK, MessageBoxImage.Information);
                     LimparFormulario();

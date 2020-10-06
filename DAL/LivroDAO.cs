@@ -11,17 +11,35 @@ namespace ProjetoWPF.DAL
     {
         private static Context _context = SingletonContext.GetInstance();
 
-        public static bool Cadastrar(Livro livro)
+        public static bool Cadastrar(List<Livro> livros, int quantidade)
         {
-            //aqui, fazer o for com o resultado do txt quantidade e -> usar o .AddRange(livro) no lugar do Add(livro)
-            if(BuscarPorNome(livro.Nome) == null)
+
+            if (quantidade > 1)
             {
-                _context.Livros.Add(livro);
-                _context.SaveChanges();
-                return true;
+                for (int i = 0; i < quantidade; i++)
+                {
+                    if (BuscarPorNome(livros[i].Nome) == null)
+                    {
+                        _context.Livros.AddRange(livros);
+
+                    }
+
+                    _context.SaveChanges();
+
+
+                    return true;
+
+                }
+                if (quantidade == 1)
+                {
+                    _context.Livros.AddRange(livros);
+                    _context.SaveChanges();
+                    return true;
+                }
+
             }
             return false;
-            
+
         }
 
         public static List<Livro> BuscarPorCategoria(string nome) => _context.Livros.Include(x => x.Categoria).Where(x => x.Categoria.Nome.Equals(nome)).ToList();
