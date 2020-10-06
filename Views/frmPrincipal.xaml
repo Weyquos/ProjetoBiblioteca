@@ -29,6 +29,9 @@
                 <MenuItem x:Name="menuListarTodosLivros" Header="_Todos os Livros" Click="menuListarTodosLivros_Click" />
                 <MenuItem x:Name="menuListarLivrosLocados" Header="_Livros Locados" Click="menuListarLivrosLocados_Click" />
             </MenuItem>
+            <MenuItem Header="_Buscar">
+                <MenuItem x:Name="BuscarPorCategoria" Header="_Livros Por Categoria" Click="menuBuscarPorCategoria_Click" />
+            </MenuItem>
             <MenuItem x:Name="menuSair" Header="_Sair" Click="menuSair_Click" />
         </Menu>
 

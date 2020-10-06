@@ -37,6 +37,12 @@ namespace ProjetoWPF.Views
             frm.ShowDialog();
         }
 
+        private void menuBuscarPorCategoria_Click(object sender, RoutedEventArgs e)
+        {
+            frmBuscarLivroPorCategoria frm = new frmBuscarLivroPorCategoria();
+            frm.ShowDialog();
+        }
+
         private void menuCadastrarCategoria_Click(object sender, RoutedEventArgs e)
         {
             frmCadastrarCategoria frm = new frmCadastrarCategoria();

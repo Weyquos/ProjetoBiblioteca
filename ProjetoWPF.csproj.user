@@ -16,6 +16,9 @@
     <Compile Update="Views\frmAlugarLivro.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\frmBuscarLivroPorCategoria.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\frmCadastrarCategoria.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\frmAlugarLivro.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\frmBuscarLivroPorCategoria.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\frmCadastrarCategoria.xaml">

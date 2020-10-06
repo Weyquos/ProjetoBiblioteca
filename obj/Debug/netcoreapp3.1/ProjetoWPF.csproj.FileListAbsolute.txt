@@ -77,3 +77,5 @@ C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\View
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmListarLivrosLocados.baml
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmDevolverLivro.g.cs
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmDevolverLivro.baml
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmBuscarLivroPorCategoria.g.cs
+C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\obj\Debug\netcoreapp3.1\Views\frmBuscarLivroPorCategoria.baml

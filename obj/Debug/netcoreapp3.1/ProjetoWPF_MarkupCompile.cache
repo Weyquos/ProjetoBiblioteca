@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\Weyquos\source\repos\ProjetoWPF\ProjetoWPF\App.xaml
-12341993313
+131761725914
 
-44-902732619
+45833235908
 217500665710
-Views\frmAlterarLivro.xaml;Views\frmAlterarUsuario.xaml;Views\frmAlugarLivro.xaml;Views\frmCadastrarCategoria.xaml;Views\frmCadastrarLivro.xaml;Views\frmCadastrarUsuario.xaml;Views\frmDevolverLivro.xaml;Views\frmListarLivrosLocados.xaml;Views\frmListarTodosLivros.xaml;Views\frmPrincipal.xaml;Views\frmRemoverLivro.xaml;Views\frmRemoverUsuario.xaml;
+Views\frmAlterarLivro.xaml;Views\frmAlterarUsuario.xaml;Views\frmAlugarLivro.xaml;Views\frmBuscarLivroPorCategoria.xaml;Views\frmCadastrarCategoria.xaml;Views\frmCadastrarLivro.xaml;Views\frmCadastrarUsuario.xaml;Views\frmDevolverLivro.xaml;Views\frmListarLivrosLocados.xaml;Views\frmListarTodosLivros.xaml;Views\frmPrincipal.xaml;Views\frmRemoverLivro.xaml;Views\frmRemoverUsuario.xaml;
 
 False
 

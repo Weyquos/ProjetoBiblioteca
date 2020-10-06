@@ -24,6 +24,7 @@ namespace ProjetoWPF.DAL
             
         }
 
+        public static List<Livro> BuscarPorCategoria(string nome) => _context.Livros.Include(x => x.Categoria).Where(x => x.Categoria.Nome.Equals(nome)).ToList();
         public static Livro BuscarPorNome(string nome) => _context.Livros.FirstOrDefault(x => x.Nome.Equals(nome));
 
         public static List<Livro> Listar() => _context.Livros.Include(x=> x.Categoria).ToList();
