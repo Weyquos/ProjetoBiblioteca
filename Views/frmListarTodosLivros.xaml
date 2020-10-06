@@ -10,7 +10,6 @@
         <DataGrid x:Name="dtaLivros" AutoGenerateColumns="False" HorizontalAlignment="Center" VerticalAlignment="Top" Height="220" Width="500" Margin="0,22,0,0" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nome" Width="70" Binding="{Binding Nome}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Categoria" Width="70" Binding="{Binding Categoria.Nome}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Autor" Width="70" Binding="{Binding Autor}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Editora" Width="70" Binding="{Binding Editora}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Ano de Publicação" Width="1*" Binding="{Binding AnoPublicacao}"></DataGridTextColumn>

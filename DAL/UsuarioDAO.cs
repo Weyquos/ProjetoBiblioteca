@@ -38,7 +38,15 @@ namespace ProjetoWPF.DAL
         public static void RemoverUsuario(Usuario usuario)
         {
             _context.Usuarios.Remove(usuario);
-            _context.SaveChanges();
+            
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (Exception Error)
+            {
+                throw;
+            }
         }
 
     }

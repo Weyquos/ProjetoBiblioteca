@@ -19,10 +19,7 @@ namespace ProjetoWPF.DAL
 
         public static List<Movimentacao> Listar() => _context.Movimentacao.ToList();
 
-        //public static Movimentacao BuscarLinkCpfLivro(string nome, string cpf) => _context.Movimentacao.FirstOrDefault(x => x.Livro.Nome.Equals(nome) && x => x.Usuario.Cpf.Equals(cpf));
-
         public static Movimentacao BuscarPorId(int id) => _context.Movimentacao.Find(id);
 
-        //Criar metódo que busca o CPF + nome do livro pra validar a entrega.
     }
 }
